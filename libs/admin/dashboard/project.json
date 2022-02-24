@@ -1,0 +1,26 @@
+{
+  "projectType": "library",
+  "root": "libs/admin/dashboard",
+  "sourceRoot": "libs/admin/dashboard/src",
+  "prefix": "nxt",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/admin/dashboard"],
+      "options": {
+        "jestConfig": "libs/admin/dashboard/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/admin/dashboard/src/**/*.ts",
+          "libs/admin/dashboard/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}
