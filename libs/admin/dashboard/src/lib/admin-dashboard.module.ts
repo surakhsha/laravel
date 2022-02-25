@@ -5,7 +5,8 @@ import { DashboardViewComponent } from './dashboard-view/dashboard-view.componen
 
 
 export const adminDashboardRoutes: Route[] = [{
-  path: 'admin-dashboard', Component: DashboardViewComponent
+  path: '', 
+  component: DashboardViewComponent
 }];
 
 @NgModule({

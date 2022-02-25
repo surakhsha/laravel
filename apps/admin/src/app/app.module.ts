@@ -9,20 +9,19 @@ import { EffectsModule } from '@ngrx/effects';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from '../environments/environment';
 import { StoreRouterConnectingModule } from '@ngrx/router-store';
+import { DragDropModule } from '@angular/cdk/drag-drop';  
 import {
   AdminDashboardModule,
   adminDashboardRoutes,
 } from '@nxt/admin/dashboard';
-import { DashboardViewComponent } from 'libs/admin/dashboard/src/lib/dashboard-view/dashboard-view.component';
+import { MainViewComponent } from './pages/main-view/main-view.component';
+import { AppRoutingModule } from './app.routing.module';
+
 
 @NgModule({
-  declarations: [AppComponent, NxWelcomeComponent],
+  declarations: [AppComponent, NxWelcomeComponent, MainViewComponent],
   imports: [
-    BrowserModule,
-    RouterModule.forRoot(
-      [{ path: 'admin-dashboard', children: adminDashboardRoutes }],
-      { initialNavigation: 'enabledBlocking' }
-    ),
+    BrowserModule, AppRoutingModule, DragDropModule,
     StoreModule.forRoot(
       {},
       {
